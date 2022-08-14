@@ -6,5 +6,6 @@ const app = express();
 app.use(express.json());
 app.use(indexRoutes);
 app.use(taskRoutes);
-app.listen(PORT);
-console.log(`puerto ${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Servidor a la escucha en el puerto ${PORT}`);
+});
